@@ -2,9 +2,15 @@ import pandas as pd
 from datetime import date, datetime, timedelta
 import os
 import csv
+import sys
 
 
 today = date.today()
+week_number = today.isocalendar().week
+print(week_number)
+
+# FILE TO CHECK
+csv = sys.argv[1]
 
 
 # Define the expected headers for each CSV type
